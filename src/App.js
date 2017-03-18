@@ -1,18 +1,14 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Calendar from './Calendar';
+import Months from './Calendars/Months';
 
 class App extends Component {
   render() {
+  const month = Months(2017, 3);
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          This is going to be my calendar app.
-        </p>
+        <Calendar label={month.Label} days={month.days}/>
       </div>
     );
   }

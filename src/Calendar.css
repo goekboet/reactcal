@@ -1,0 +1,20 @@
+.Calendar {
+
+}
+
+.Cell {
+    width: 75px;
+    height: 75px;
+    border: 1px solid black;
+    padding: 5px;
+    float: left;
+    opacity: 0.5;
+}
+
+.belong {
+    opacity: 1;
+}
+
+.Cell:nth-child(7n+1) {
+    clear: both;
+}

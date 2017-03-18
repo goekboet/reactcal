@@ -33,7 +33,7 @@ const Months = (year, month) =>
   var days = [];
   var weeks = [];
 
-  while (calendarDay.format('W') == firstWeek)  
+  while (calendarDay.format('W') === firstWeek)  
     calendarDay.hour(-24); 
   calendarDay.hour(24);
 
@@ -43,9 +43,10 @@ const Months = (year, month) =>
     calendarWeek.hour(24 * 7);
   }
 
-  for(var i = 0; i < (7 * 5); i++) { 
+  for(var j = 0; j < (7 * 5); j++) { 
     days.push(
-      calendarDay.format('D')
+      { date: calendarDay.format('D'),
+        belongs: calendarDay.month() === (month - 1) }
     );
     calendarDay.hour(24);
   }
@@ -54,7 +55,8 @@ const Months = (year, month) =>
   return {
     Label: MonthNames[month - 1] + ' ' +  year,
     WeekDays: weekDays,
-    weeks: weeks 
+    weeks: weeks, 
+    days: days
   }
 }
 
