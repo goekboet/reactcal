@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
-import Calendar from './Calendar';
+import Month from './Month';
 import Months from './Calendars/Months';
 
 class App extends Component {
   render() {
-  const month = Months(2017, 3);
+    const month = Months(2017, 2);
     return (
       <div className="App">
-        <Calendar label={month.Label} days={month.days}/>
+        <Month key="2017-2" label={month.label} weeks={month.weeks} />
       </div>
     );
   }

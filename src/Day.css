@@ -1,0 +1,5 @@
+.Day {
+    display: table-cell;
+    border: 1px solid black;
+    padding: 5px;
+}

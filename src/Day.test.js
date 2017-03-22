@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Calendar from './Calendar';
+import Day from './Day';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<Calendar />, div);
+  ReactDOM.render(<Day belongs="true" date="1" week="1"/>, div);
 });

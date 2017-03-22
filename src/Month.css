@@ -1,0 +1,13 @@
+.Month {
+    width: 100%;
+    border: 1px solid black;
+}
+
+.Calendar {
+    display: table;
+    width: 100%;
+}
+
+.Week {
+    display: table-row;
+}

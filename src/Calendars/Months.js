@@ -1,4 +1,20 @@
-import moment from 'moment';
+import D from 'date-fns';
+
+const chunkBy = (n, identify, insert) => {
+  return (acc, e, i) => {
+    const chunk = Math.floor(i/n);
+    acc[chunk] = (acc[chunk] || identify(e));
+    insert(acc[chunk], e);
+
+    return acc;
+  }
+}
+
+const asWeek = e => {
+  return { key: D.format(D.parse(e.key), "YYYY-W"), days:[]}
+}
+
+const addDay = (week, day) => week.days.push(day)
 
 const MonthNames = [
   "Januari",
@@ -27,36 +43,22 @@ const weekDays = [
 
 const Months = (year, month) =>
 {
-  var calendarDay  = moment([year, month - 1]);
-  var firstWeek = calendarDay.format('W');
-
-  var days = [];
-  var weeks = [];
-
-  while (calendarDay.format('W') === firstWeek)  
-    calendarDay.hour(-24); 
-  calendarDay.hour(24);
-
-  var calendarWeek = moment(calendarDay);
-  for (var i = 0; i < 5; i++) {
-    weeks.push('v' + calendarWeek.format('W'));
-    calendarWeek.hour(24 * 7);
-  }
-
-  for(var j = 0; j < (7 * 5); j++) { 
-    days.push(
-      { date: calendarDay.format('D'),
-        belongs: calendarDay.month() === (month - 1) }
-    );
-    calendarDay.hour(24);
-  }
-
+  let begin = D.startOfISOWeek(new Date(year, month));
+  let end = D.addDays(begin, 34);
+  let weeks = D.eachDay(begin, end).map(d =>
+  { 
+    return {
+      key: D.format(d, 'YYYY-MM-DD'), 
+      week: 'v' + D.getISOWeek(d),
+      belongs: D.getMonth(d) === month,
+      date: D.getDate(d).toString()
+    }
+  }).reduce(chunkBy(7, asWeek, addDay), []);
 
   return {
-    Label: MonthNames[month - 1] + ' ' +  year,
-    WeekDays: weekDays,
-    weeks: weeks, 
-    days: days
+    label: MonthNames[month] + ' ' +  year,
+    weekdays: weekDays,
+    weeks: weeks 
   }
 }
 
