@@ -1,6 +1,6 @@
 .Day {
     display: table-cell;
-    border: 1px solid gray;
+    border: 2px solid gray;
     padding: 5px;
     color: gray;
 }
@@ -11,6 +11,7 @@
 
 .Day p {
     margin: 0px;
+    font-weight: bold;
 }
 
 .Date {

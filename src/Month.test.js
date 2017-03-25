@@ -1,8 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Month from './Month';
+import renderer from 'react-test-renderer';
+import testdata from './Calendars/Months.testdata';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<Month label="test" weeks={[]} weekdays={[]}/>, div);
+describe('Month view', () => {
+  it('renders without crashing', () => {
+    const div = document.createElement('div');
+    ReactDOM.render(<Month label="test" weeks={[]} weekdays={[]} />, div);
+  });
+
+  it('matches snapshot', () => {
+    const tree = renderer.create(
+      <Month 
+        label={testdata.label} 
+        weeks={testdata.weeks} 
+        weekdays={testdata.weekdays} />
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
+  })
 });
+
