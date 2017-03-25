@@ -8,7 +8,14 @@ const Month = (props) =>
     <div className="Month">
         <h1>{props.label}</h1>
         <div className="Calendar">
-        {props.weeks.map(w => 
+            <div className="Header">
+                {props.weekdays.map(wd => 
+                    <div 
+                        key={wd} 
+                        className="Weekday">{wd}
+                    </div>)}
+            </div>
+            {props.weeks.map(w => 
             <div key={w.key} className="Week">
                 {w.days.map(d => <Day 
                     key={d.key} 
@@ -16,9 +23,15 @@ const Month = (props) =>
                     week={d.week} 
                     date={d.date}/>)}
             </div>
-        )}
+            )}
         </div>
     </div>);
 };
+
+Month.propTypes = {
+    label: React.PropTypes.string,
+    weeks: React.PropTypes.arrayOf(React.PropTypes.object),
+    weekdays: React.PropTypes.arrayOf(React.PropTypes.string)
+}
 
 export default Month;

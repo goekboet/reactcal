@@ -8,7 +8,10 @@ class App extends Component {
     const month = Months(2017, 2);
     return (
       <div className="App">
-        <Month key="2017-2" label={month.label} weeks={month.weeks} />
+        <Month 
+          label={month.label} 
+          weeks={month.weeks}
+          weekdays={month.weekdays} />
       </div>
     );
   }

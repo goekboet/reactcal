@@ -4,5 +4,5 @@ import Month from './Month';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<Month label="test" weeks={[]} />, div);
+  ReactDOM.render(<Month label="test" weeks={[]} weekdays={[]}/>, div);
 });

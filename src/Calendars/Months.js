@@ -14,7 +14,7 @@ const asWeek = e => {
   return { key: D.format(D.parse(e.key), "YYYY-W"), days:[]}
 }
 
-const addDay = (week, day) => week.days.push(day)
+const addToWeek = (week, day) => week.days.push(day)
 
 const MonthNames = [
   "Januari",
@@ -31,15 +31,12 @@ const MonthNames = [
   "December"
 ];
 
-const weekDays = [
-  "mån",
-  "tis",
-  "ons",
-  "tor",
-  "fre",
-  "lör",
-  "sön"
-];
+const weekDays = begin => {
+  let end = D.addDays(begin, 6);
+
+  return D.eachDay(begin, end)
+    .map(d => D.format(d, 'ddd'));
+}
 
 const Months = (year, month) =>
 {
@@ -53,11 +50,11 @@ const Months = (year, month) =>
       belongs: D.getMonth(d) === month,
       date: D.getDate(d).toString()
     }
-  }).reduce(chunkBy(7, asWeek, addDay), []);
+  }).reduce(chunkBy(7, asWeek, addToWeek), []);
 
   return {
     label: MonthNames[month] + ' ' +  year,
-    weekdays: weekDays,
+    weekdays: weekDays(begin),
     weeks: weeks 
   }
 }

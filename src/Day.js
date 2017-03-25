@@ -8,7 +8,7 @@ const Day = (props) =>
     return (
     <div className={["Day", belong].join("")}>
         <p className="Date">{props.date}</p>
-        <p className="Week">{props.week}</p>
+        <p className="WeekLabel">{props.week}</p>
     </div>);
 };
 

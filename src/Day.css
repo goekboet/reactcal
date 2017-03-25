@@ -1,5 +1,26 @@
 .Day {
     display: table-cell;
-    border: 1px solid black;
+    border: 1px solid gray;
     padding: 5px;
+    color: gray;
+}
+
+.Belongs {
+    color: black;
+}
+
+.Day p {
+    margin: 0px;
+}
+
+.Date {
+    float: right;
+    font-size: 10vw;
+}
+
+.WeekLabel {
+    float: right;
+    clear: right;
+    color: gray;
+    opacity: 0;
 }

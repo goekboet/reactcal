@@ -1,6 +1,10 @@
 .Month {
     width: 100%;
-    border: 1px solid black;
+    margin: 5px;
+}
+
+.Month h1 {
+    text-align: center;
 }
 
 .Calendar {
@@ -8,6 +12,19 @@
     width: 100%;
 }
 
+.Header {
+    display: table-row;
+}
+
+.Weekday {
+    display: table-cell;
+    text-align: center;
+}
+
 .Week {
     display: table-row;
+}
+
+div.Week > div:first-child .WeekLabel {
+    opacity: 1;
 }

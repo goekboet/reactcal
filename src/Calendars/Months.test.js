@@ -8,7 +8,7 @@ describe('Month calendar', () => {
 
   it('gives correct weekdays', () => {
     const weekdays = months(2017, 3).weekdays;
-    expect(weekdays).toEqual(["mån", "tis", "ons", "tor", "fre", "lör", "sön"]);
+    expect(weekdays).toEqual(["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]);
   });
   
   it('gives correct weeks', () => {
