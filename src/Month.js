@@ -1,16 +1,13 @@
 import React from 'react';
 import Day from './Day';
 import './Month.css';
+import Stepper from './Stepper';
 
 const Month = (props) =>
 {
     return (
     <div className="Month">
-        <div className="Label">
-        <a>◀</a>
-        <h1>{props.label}</h1>
-        <a>▶</a>
-        </div>
+        <Stepper label={props.label} />
         <div className="Calendar">
             <div className="Header">
                 {props.weekdays.map(wd => 
