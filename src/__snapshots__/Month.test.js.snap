@@ -3,13 +3,17 @@ exports[`Month view matches snapshot 1`] = `
   className="Month">
   <div
     className="Label">
-    <a>
+    <a
+      href="#"
+      onClick={[Function]}>
       ◀
     </a>
     <h1>
       Mars 2017
     </h1>
-    <a>
+    <a
+      href="#"
+      onClick={[Function]}>
       ▶
     </a>
   </div>

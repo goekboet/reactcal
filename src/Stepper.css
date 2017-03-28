@@ -1,0 +1,21 @@
+.Label {
+    text-align: center;
+    font-size: 4vw;
+}
+
+.Label > h1 {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.Label > a {
+    vertical-align: middle;
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: green;
+}

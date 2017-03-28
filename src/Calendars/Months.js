@@ -31,30 +31,34 @@ const MonthNames = [
   "December"
 ];
 
-const weekDays = begin => {
-  let end = D.addDays(begin, 6);
+const weekDays = date => {
+  const begin = D.startOfISOWeek(date);
+  const end = D.addDays(begin, 6);
 
   return D.eachDay(begin, end)
     .map(d => D.format(d, 'ddd'));
 }
 
-const Months = (year, month) =>
+const Months = (date) =>
 {
-  let begin = D.startOfISOWeek(new Date(year, month));
-  let end = D.addDays(begin, 34);
-  let weeks = D.eachDay(begin, end).map(d =>
+  const first = D.startOfISOWeek(D.startOfMonth(date));
+  const currentMonth = D.getMonth(date);
+  const currentYear = D.getYear(date);
+  
+  const last = D.addDays(first, 34);
+  const weeks = D.eachDay(first, last).map(d =>
   { 
     return {
       key: D.format(d, 'YYYY-MM-DD'), 
       week: 'v' + D.getISOWeek(d),
-      belongs: D.getMonth(d) === month,
+      belongs: D.getMonth(d) === currentMonth,
       date: D.getDate(d).toString()
     }
   }).reduce(chunkBy(7, asWeek, addToWeek), []);
 
   return {
-    label: MonthNames[month] + ' ' +  year,
-    weekdays: weekDays(begin),
+    label: MonthNames[currentMonth] + ' ' +  currentYear,
+    weekdays: weekDays(date),
     weeks: weeks 
   }
 }

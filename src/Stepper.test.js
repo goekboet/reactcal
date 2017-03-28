@@ -5,6 +5,9 @@ import Stepper from './Stepper';
 describe('Month view', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<Stepper label="test"/>, div);
+    ReactDOM.render(<Stepper 
+      label="test"
+      previous={() => undefined}
+      next={() => undefined}/>, div);
   });
 });

@@ -7,7 +7,10 @@ const Month = (props) =>
 {
     return (
     <div className="Month">
-        <Stepper label={props.label} />
+        <Stepper 
+            label={props.label}
+            previous={props.previousMonth}
+            next={props.nextMonth} />
         <div className="Calendar">
             <div className="Header">
                 {props.weekdays.map(wd => 
@@ -32,7 +35,9 @@ const Month = (props) =>
 Month.propTypes = {
     label: React.PropTypes.string,
     weeks: React.PropTypes.arrayOf(React.PropTypes.object),
-    weekdays: React.PropTypes.arrayOf(React.PropTypes.string)
+    weekdays: React.PropTypes.arrayOf(React.PropTypes.string),
+    previosMonth: React.PropTypes.func,
+    nextMonth: React.PropTypes.func
 }
 
 export default Month;
