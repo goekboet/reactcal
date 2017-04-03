@@ -8,6 +8,7 @@ const Month = (props) =>
     return (
     <div className="Month">
         <Stepper 
+            className="Label"
             label={props.label}
             previous={props.previousMonth}
             next={props.nextMonth} />

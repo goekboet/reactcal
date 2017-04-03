@@ -9,7 +9,8 @@ class App extends Component {
     super(props);
     
     this.state = {
-      date: new Date()
+      date: new Date(),
+      view: "month"
     }
     
     this.stepMonth = this.stepMonth.bind(this);

@@ -1,0 +1,7 @@
+exports[`Link view matches snapshot 1`] = `
+<a
+  href="#"
+  onClick={[Function]}>
+  test
+</a>
+`;

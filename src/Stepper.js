@@ -1,23 +1,20 @@
 import React from 'react';
+import Link from './Link';
 import './Stepper.css';
 
 const Stepper = props => {
-    const handleEvent = f => {
-        return e => {
-            e.preventDefault();
-            f();
-        }
-    }
-        return (
-        <div className="Label">
-        <a href="#" onClick={handleEvent(props.previous)}>◀</a>
-        <h1>{props.label}</h1>
-        <a href="#" onClick={handleEvent(props.next)}>▶</a>
+    return (
+        <div className={props.className}>
+            <Link text="◀" action={props.previous} />
+            <Link text={props.label} action={props.current} />
+            <Link text="▶" action={props.next} />
         </div>)
 }
 
 Stepper.propTypes = {
+    className: React.PropTypes.string,
     label: React.PropTypes.string,
+    current: React.PropTypes.func,
     previous: React.PropTypes.func,
     next: React.PropTypes.func
 }
