@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import D from 'date-fns';
 import Month from './Month';
+import Week from './Week';
 import Months from './Calendars/Months';
 
 class App extends Component {
@@ -18,20 +19,32 @@ class App extends Component {
 
   render() {
     const month = Months(this.state.date);
-    return (
-      <div className="App">
-        <Month 
-          label={month.label} 
-          weeks={month.weeks}
-          weekdays={month.weekdays}
-          previousMonth={this.stepMonth(-1)}
-          nextMonth={this.stepMonth(1)} />
-      </div>
-    );
+    if (this.state.view === "month") 
+      return (
+        <div className="App">
+          <Month 
+            label={month.label} 
+            weeks={month.weeks}
+            weekview={this.changeView()}
+            weekdays={month.weekdays}
+            previousMonth={this.stepMonth(-1)}
+            nextMonth={this.stepMonth(1)} />
+        </div>
+      );
+    else
+      return (
+        <div className="App">
+          <Week monthView={this.changeView()("2017-04-03", "month")} />
+        </div>
+      )
   }
 
   stepMonth(i) {
     return () => this.setState({ date: D.addMonths(this.state.date, i)})
+  }
+
+  changeView() {
+    return (date, view) => () => this.setState({date: D.parse(date), view: view})
   }
 }
 

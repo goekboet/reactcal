@@ -26,7 +26,8 @@ const Month = (props) =>
                     key={d.key} 
                     belongs={d.belongs} 
                     week={d.week} 
-                    date={d.date}/>)}
+                    date={d.date}
+                    monthView={props.weekview(d.key, "week")}/>)}
             </div>
             )}
         </div>
@@ -36,6 +37,7 @@ const Month = (props) =>
 Month.propTypes = {
     label: React.PropTypes.string,
     weeks: React.PropTypes.arrayOf(React.PropTypes.object),
+    weekview: React.PropTypes.func,
     weekdays: React.PropTypes.arrayOf(React.PropTypes.string),
     previosMonth: React.PropTypes.func,
     nextMonth: React.PropTypes.func

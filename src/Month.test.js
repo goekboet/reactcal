@@ -14,7 +14,8 @@ describe('Month view', () => {
     const tree = renderer.create(
       <Month 
         label={testdata.label} 
-        weeks={testdata.weeks} 
+        weeks={testdata.weeks}
+        weekview={(a, b) => () => undefined} 
         weekdays={testdata.weekdays} />
     ).toJSON();
     expect(tree).toMatchSnapshot();
