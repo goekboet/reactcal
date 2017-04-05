@@ -11,13 +11,19 @@ const Title = (date) =>
     return "vecka " + D.format(date, 'W');
 }
 
+const Month = (date) =>
+{
+    return D.format(date, "YYYY-MM");
+}
+
 const Week = (date) => 
 {
     const first = D.startOfISOWeek(date);
     const last = D.addDays(first, 6);
 
     return { 
-        title: Title(date), 
+        title: Title(date),
+        month: Month(date),
         days: Days(first, last)};
 };
 

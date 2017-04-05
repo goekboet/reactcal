@@ -11,15 +11,16 @@ class App extends Component {
     
     this.state = {
       date: new Date(),
-      view: "month"
+      view: "month",
     }
     
-    this.stepMonth = this.stepMonth.bind(this);
+    this.step = this.step.bind(this);
+    //this.stepMonth = this.stepMonth.bind(this);
   }
 
   render() {
-    const month = Months(this.state.date);
-    if (this.state.view === "month") 
+    if (this.state.view === "month") {
+      const month = Months(this.state.date);
       return (
         <div className="App">
           <Month 
@@ -27,21 +28,34 @@ class App extends Component {
             weeks={month.weeks}
             weekview={this.changeView()}
             weekdays={month.weekdays}
-            previousMonth={this.stepMonth(-1)}
-            nextMonth={this.stepMonth(1)} />
+            previousMonth={this.step(-1, "month")}
+            nextMonth={this.step(1, "month")} />
         </div>
       );
-    else
+    }
+    else {
+      const week = Week(this.state.date);
       return (
         <div className="App">
-          <Week monthView={this.changeView()("2017-04-03", "month")} />
+          <Week
+            label={week.title}
+            monthView={this.changeView()("2017-04-03", "month")} 
+          />
         </div>
       )
+    }
   }
 
-  stepMonth(i) {
-    return () => this.setState({ date: D.addMonths(this.state.date, i)})
+  step(i, p) {
+    if (p == "month")
+      return () => this.setState({ date: D.addMonths(this.state.date, i)})
+    else
+      return () => this.setState({ date: D.addWeeks(this.state.date, i)})
   }
+
+  // stepMonth(i) {
+  //   return () => this.setState({ date: D.addMonths(this.state.date, i)})
+  // }
 
   changeView() {
     return (date, view) => () => this.setState({date: D.parse(date), view: view})

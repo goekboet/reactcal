@@ -6,9 +6,13 @@ describe('Week calendar', () => {
     const week = Week(refdate);
 
     it('gives correct days', () => {
-        expect(week.days).toEqual(testdata.Week.days)
+        expect(week.days).toEqual(testdata.Week.days);
     });
     it('gives right title', () => {
-        expect(week.title).toEqual(testdata.Week.title)
+        expect(week.title).toEqual(testdata.Week.title);
+    })
+
+    it('gives the correct month', () => {
+        expect(week.month).toEqual(testdata.Week.month);
     })
 })
