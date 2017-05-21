@@ -4,6 +4,7 @@ import D from 'date-fns';
 import Month from './Month';
 import Week from './Week';
 import Months from './Calendars/Months';
+import Weeks from './Calendars/Week';
 
 class App extends Component {
   constructor(props) {
@@ -34,12 +35,14 @@ class App extends Component {
       );
     }
     else {
-      const week = Week(this.state.date);
+      const week = Weeks(this.state.date);
+      
       return (
         <div className="App">
           <Week
             label={week.title}
-            monthView={this.changeView()("2017-04-03", "month")} 
+            month={week.month}
+            monthView={this.changeView()(week.month, "month")} 
           />
         </div>
       )
@@ -47,7 +50,7 @@ class App extends Component {
   }
 
   step(i, p) {
-    if (p == "month")
+    if (p === "month")
       return () => this.setState({ date: D.addMonths(this.state.date, i)})
     else
       return () => this.setState({ date: D.addWeeks(this.state.date, i)})

@@ -1,10 +1,10 @@
 import D from 'date-fns';
 
+const Consecutive = (x) => [...Array(x).keys()].map(i => i.toString())
+
 const Days = (first, last) => D.eachDay(first, last).map(day => {
     return { key: D.format(day, 'YYYY-MM-DD'), hours: Consecutive(24) };
 });
-
-const Consecutive = (x) => [...Array(x).keys()].map(i => i.toString())
 
 const Title = (date) =>
 {
