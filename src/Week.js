@@ -2,7 +2,7 @@ import React from 'react';
 import Link from './Link';
 
 const Week = (props) => {
-    return (<Link text="Hello" action={props.monthView} />)
+    return (<Link text="hello" action={props.monthView} />)
 }
 
 Week.propTypes = {
