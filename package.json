@@ -5,6 +5,7 @@
   "dependencies": {
     "date-fns": "^1.28.0",
     "enzyme": "^2.8.0",
+    "lodash": "^4.17.4",
     "react": "^15.4.2",
     "react-addons-test-utils": "^15.4.2",
     "react-dom": "^15.4.2",

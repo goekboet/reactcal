@@ -1,5 +1,5 @@
 const Week = {
-    title: "v. 9, Mars 2017",
+    title: "v. 9, March 2017",
     days: 
     [{
         key: "2017-02-27", 
