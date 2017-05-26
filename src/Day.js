@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Day.css';
 
 const Day = (props) =>
@@ -21,12 +22,12 @@ const Day = (props) =>
     </div>);
 };
 
-Day.prototypes = {
-    key: React.PropTypes.string,
-    belongs: React.PropTypes.bool,
-    week: React.PropTypes.string,
-    date: React.PropTypes.string,
-    monthView: React.PropTypes.func
+Day.PropTypes = {
+    key: PropTypes.string,
+    belongs: PropTypes.bool,
+    week: PropTypes.string,
+    date: PropTypes.string,
+    monthView: PropTypes.func
 }
 
 export default Day;

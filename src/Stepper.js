@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Link from './Link';
 import './Stepper.css';
 
@@ -12,11 +13,11 @@ const Stepper = props => {
 }
 
 Stepper.propTypes = {
-    className: React.PropTypes.string,
-    label: React.PropTypes.string,
-    current: React.PropTypes.func,
-    previous: React.PropTypes.func,
-    next: React.PropTypes.func
+    className: PropTypes.string,
+    label: PropTypes.string,
+    current: PropTypes.func,
+    previous: PropTypes.func,
+    next: PropTypes.func
 }
 
 export default Stepper;

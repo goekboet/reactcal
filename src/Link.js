@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 const Link = props => {
     const handleClick = f => {
@@ -11,8 +12,8 @@ const Link = props => {
 }
 
 Link.propTypes = {
-    text: React.PropTypes.string.isRequired,
-    action: React.PropTypes.func
+    text: PropTypes.string.isRequired,
+    action: PropTypes.func
 }
 
 export default Link;

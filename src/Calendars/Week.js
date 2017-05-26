@@ -27,7 +27,13 @@ const Week = (date) =>
     return { 
         title: Title(date),
         month: Month(date),
-        days: Days(first, last)};
+        days: Days(first, last),
+        weekdays: Weekdays(first, last)};
 };
+
+const Weekdays = (from, to) => 
+{
+    return D.eachDay(from, to).map(x => D.format(x, "ddd"));
+}
 
 export default Week;

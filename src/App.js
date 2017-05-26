@@ -41,8 +41,7 @@ class App extends Component {
         <div className="App">
           <Week
             label={week.title}
-            month={week.month}
-            monthView={this.changeView()(week.month, "month")} 
+            days={week.days}
           />
         </div>
       )

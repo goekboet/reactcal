@@ -9,7 +9,6 @@ describe('Week view', () => {
     ReactDOM.render(<Week 
         label={testdata.Week.title}
         month={testdata.Week.month}
-        days={testdata.Week.days}
-        monthView={() => undefined }/>, div);
+        days={testdata.Week.days}/>, div);
   });
 });

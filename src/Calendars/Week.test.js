@@ -12,7 +12,7 @@ describe('Week calendar', () => {
         expect(week.title).toEqual(testdata.Week.title);
     })
 
-    it('gives the correct month', () => {
-        expect(week.month).toEqual(testdata.Week.month);
+    it('gives the correct wekkdays', () => {
+        expect(week.weekdays).toEqual(testdata.Week.weekdays);
     })
 })

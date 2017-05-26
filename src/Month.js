@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Day from './Day';
 import './Month.css';
 import Stepper from './Stepper';
@@ -34,13 +35,13 @@ const Month = (props) =>
     </div>);
 };
 
-Month.propTypes = {
-    label: React.PropTypes.string,
-    weeks: React.PropTypes.arrayOf(React.PropTypes.object),
-    weekview: React.PropTypes.func,
-    weekdays: React.PropTypes.arrayOf(React.PropTypes.string),
-    previosMonth: React.PropTypes.func,
-    nextMonth: React.PropTypes.func
+Month.PropTypes = {
+    label: PropTypes.string,
+    weeks: PropTypes.arrayOf(PropTypes.object),
+    weekview: PropTypes.func,
+    weekdays: PropTypes.arrayOf(PropTypes.string),
+    previosMonth: PropTypes.func,
+    nextMonth: PropTypes.func
 }
 
 export default Month;

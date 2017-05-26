@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Link from './Link';
 
 const Week = (props) => {
@@ -6,14 +7,14 @@ const Week = (props) => {
 }
 
 Week.propTypes = {
-    label: React.PropTypes.string.isRequired,
-    month: React.PropTypes.string.isRequired,
-    days: React.PropTypes.arrayOf(React.PropTypes.shape(
+    label: PropTypes.string.isRequired,
+    days: PropTypes.arrayOf(PropTypes.shape(
         {
-            key: React.PropTypes.string.isRequired,
-            hours: React.PropTypes.arrayOf(React.PropTypes.string.isRequired).isRequired
-        })),
-    monthView: React.PropTypes.func.isRequired
+            key: PropTypes.string.isRequired,
+            hours: PropTypes.arrayOf(PropTypes.shape(
+                { key: PropTypes.string.isRequired, label: PropTypes.string.isRequired}
+            )).isRequired
+        }))
 }
 
 export default Week;

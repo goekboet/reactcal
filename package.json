@@ -2,6 +2,9 @@
   "name": "calendar",
   "version": "0.1.0",
   "private": true,
+  "eslintConfig": {
+    "extends": "react-app"
+  },
   "dependencies": {
     "date-fns": "^1.28.0",
     "enzyme": "^2.8.0",
@@ -12,7 +15,7 @@
     "react-test-renderer": "^15.4.2"
   },
   "devDependencies": {
-    "react-scripts": "0.9.5"
+    "react-scripts": "1.0.6"
   },
   "scripts": {
     "start": "react-scripts start",
