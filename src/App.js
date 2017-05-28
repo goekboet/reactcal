@@ -42,6 +42,7 @@ class App extends Component {
           <Week
             label={week.title}
             days={week.days}
+            weekdays={week.weekdays}
           />
         </div>
       )
