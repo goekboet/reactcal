@@ -1,23 +1,12 @@
 import D from 'date-fns';
 import _ from 'lodash';
 
-const Consecutive = (x) => _.range(1, x + 1).map(n => {
-    return { key: (n % x).toString(), label: (n % x).toString()}
-});
-
-const Days = (first, last) => D.eachDay(first, last).map(day => {
-    return { key: D.format(day, 'YYYY-MM-DD'), hours: Consecutive(24) };
-});
-
 const Title = (date) =>
 {
     return "v. " + D.format(date, 'W, MMMM YYYY');
 }
 
-const Month = (date) =>
-{
-    return D.format(date, "YYYY-MM");
-}
+const Hours = _.range(0, 24).map(x => _.padStart(x, 2, '0') + ':00');
 
 const Week = (date) => 
 {
@@ -26,9 +15,9 @@ const Week = (date) =>
 
     return { 
         title: Title(date),
-        month: Month(date),
-        days: Days(first, last),
-        weekdays: Weekdays(first, last)};
+        weekdays: Weekdays(first, last),
+        hours: Hours
+    };
 };
 
 const Weekdays = (from, to) => 

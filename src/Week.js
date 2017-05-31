@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from './Link';
-import Stepper from './Stepper'
+import Stepper from './Stepper';
 
 const Week = (props) => {
     return (
@@ -12,13 +11,17 @@ const Week = (props) => {
             previous={props.previousWeek}
             next={props.nextWeek} />
         <div className="Calendar">
-            <div className="Header">
-                {props.weekdays.map(wd =>
-                    <div
-                        key={wd}
-                        className="Weekday">{wd}
-                    </div>)}
-            </div>
+            <table>
+                <thead>
+                <tr>
+                    <th></th>
+                    {props.weekdays.map(w => <th key={w}>{w}</th>)}
+                </tr>
+                </thead>
+                <tbody>
+                    {props.hours.map(h => <tr key={h}><td>{h}</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>)}
+                </tbody>
+            </table>
         </div>
 
     </div>)
@@ -27,13 +30,7 @@ const Week = (props) => {
 Week.propTypes = {
     label: PropTypes.string.isRequired,
     weekdays: PropTypes.arrayOf(PropTypes.string),
-    days: PropTypes.arrayOf(PropTypes.shape(
-        {
-            key: PropTypes.string.isRequired,
-            hours: PropTypes.arrayOf(PropTypes.shape(
-                { key: PropTypes.string.isRequired, label: PropTypes.string.isRequired}
-            )).isRequired
-        })),
+    hours: PropTypes.arrayOf(PropTypes.string),
     previousWeek: PropTypes.func,
     nextWeek: PropTypes.func
 }

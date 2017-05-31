@@ -8,8 +8,9 @@ describe('Week view', () => {
     const div = document.createElement('div');
     ReactDOM.render(<Week 
         label={testdata.Week.title}
-        month={testdata.Week.month}
+        hours={testdata.Week.hours}
         weekdays={testdata.Week.weekdays}
-        days={testdata.Week.days}/>, div);
+        previousWeek={x => x}
+        nextWeek={x => x}/>, div);
   });
 });
