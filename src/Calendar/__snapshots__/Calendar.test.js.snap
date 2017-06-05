@@ -1,0 +1,927 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders month correctly 1`] = `
+<div
+  className="calendar"
+>
+  <div
+    className="navigator"
+  >
+    <button
+      onClick={[Function]}
+    >
+      ◀
+    </button>
+    <button
+      onClick={[Function]}
+    >
+      January 2018
+    </button>
+    <button
+      onClick={[Function]}
+    >
+      ▶
+    </button>
+  </div>
+  <div
+    className="viewSwitch"
+  >
+    <button
+      onClick={[Function]}
+    >
+      week
+    </button>
+    <button
+      disabled={true}
+      onClick={[Function]}
+    >
+      month
+    </button>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>
+          
+        </th>
+        <th>
+          Mon
+        </th>
+        <th>
+          Tue
+        </th>
+        <th>
+          Wed
+        </th>
+        <th>
+          Thu
+        </th>
+        <th>
+          Fri
+        </th>
+        <th>
+          Sat
+        </th>
+        <th>
+          Sun
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          v.1
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          3
+        </td>
+        <td>
+          4
+        </td>
+        <td>
+          5
+        </td>
+        <td>
+          6
+        </td>
+        <td>
+          7
+        </td>
+      </tr>
+      <tr>
+        <td>
+          v.2
+        </td>
+        <td>
+          8
+        </td>
+        <td>
+          9
+        </td>
+        <td>
+          10
+        </td>
+        <td>
+          11
+        </td>
+        <td>
+          12
+        </td>
+        <td>
+          13
+        </td>
+        <td>
+          14
+        </td>
+      </tr>
+      <tr>
+        <td>
+          v.3
+        </td>
+        <td>
+          15
+        </td>
+        <td>
+          16
+        </td>
+        <td>
+          17
+        </td>
+        <td>
+          18
+        </td>
+        <td>
+          19
+        </td>
+        <td>
+          20
+        </td>
+        <td>
+          21
+        </td>
+      </tr>
+      <tr>
+        <td>
+          v.4
+        </td>
+        <td>
+          22
+        </td>
+        <td>
+          23
+        </td>
+        <td>
+          24
+        </td>
+        <td>
+          25
+        </td>
+        <td>
+          26
+        </td>
+        <td>
+          27
+        </td>
+        <td>
+          28
+        </td>
+      </tr>
+      <tr>
+        <td>
+          v.5
+        </td>
+        <td>
+          29
+        </td>
+        <td>
+          30
+        </td>
+        <td>
+          31
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          3
+        </td>
+        <td>
+          4
+        </td>
+      </tr>
+      <tr>
+        <td>
+          v.6
+        </td>
+        <td>
+          5
+        </td>
+        <td>
+          6
+        </td>
+        <td>
+          7
+        </td>
+        <td>
+          8
+        </td>
+        <td>
+          9
+        </td>
+        <td>
+          10
+        </td>
+        <td>
+          11
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`renders week correctly 1`] = `
+<div
+  className="calendar"
+>
+  <div
+    className="navigator"
+  >
+    <button
+      onClick={[Function]}
+    >
+      ◀
+    </button>
+    <button
+      onClick={[Function]}
+    >
+      v.4 January 2018
+    </button>
+    <button
+      onClick={[Function]}
+    >
+      ▶
+    </button>
+  </div>
+  <div
+    className="viewSwitch"
+  >
+    <button
+      disabled={true}
+      onClick={[Function]}
+    >
+      week
+    </button>
+    <button
+      onClick={[Function]}
+    >
+      month
+    </button>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>
+          
+        </th>
+        <th>
+          Mon
+        </th>
+        <th>
+          Tue
+        </th>
+        <th>
+          Wed
+        </th>
+        <th>
+          Thu
+        </th>
+        <th>
+          Fri
+        </th>
+        <th>
+          Sat
+        </th>
+        <th>
+          Sun
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          00:00
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          01:00
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          02:00
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          03:00
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          04:00
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          05:00
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          06:00
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          07:00
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          08:00
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          09:00
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          10:00
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          11:00
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          12:00
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          13:00
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          14:00
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          15:00
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          16:00
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          17:00
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          18:00
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          19:00
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          20:00
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          21:00
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          22:00
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          23:00
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
