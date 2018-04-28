@@ -4,6 +4,7 @@ import Types from 'prop-types';
 const ViewSwitch = props => {
     return (
         <div className={props.className}>
+            <span>
             {
                 props.views.map(x => 
                 {
@@ -13,6 +14,7 @@ const ViewSwitch = props => {
                         </button>)
                 })
             }
+            </span>
         </div>
     )
 }

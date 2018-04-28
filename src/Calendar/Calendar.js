@@ -2,9 +2,22 @@ import React, { Component } from 'react';
 import Types from 'prop-types';
 import Navigator from './Navigator/Navigator';
 import ViewSwitch from './ViewSwitch/ViewSwitch';
+import './Calendar.css'
 import { Header, Body } from './TimeTable/TimeTable';
 import { MonthLabel, WeekLabel, NextMonth, NextWeek, LastMonth, LastWeek, Hours, Headers, FirstOfMonth, Days } from './StateFuncs/StateFuncs';
 
+/*
+----------------------------------------------
+Calendar
+
+Denna komponent håller reda på en aktuell vy
+och en aktuell tidpunkt. Med hjälp av lite logik
+som bara är enkla anrop till date-fns biblioteket
+renderar den en vy över den aktuella tidsperioden
+och exponerar lite sätt till den att ändra aktuell
+tidsperiod och tidpunkt.
+----------------------------------------------
+*/
 class Calendar extends Component {
     constructor(props) {
         super(props);
@@ -29,9 +42,9 @@ class Calendar extends Component {
                     className="viewSwitch"
                     views={this.views()}
                     switch={v => () => this.setState({ view: v })}/>
-                <table>
+                <table className={"currentView"}>
                     <Header headers={[''].concat(this.headers().map(x => x.label))}/>
-                    <Body body={this.body()} />
+                    <Body className={this.state.view} body={this.body()} />
                 </table>
             </div>
             )

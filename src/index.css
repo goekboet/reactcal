@@ -1,5 +1,14 @@
 body {
+  background-color: gray;
   margin: 0;
   padding: 0;
   font-family: sans-serif;
 }
+
+#content {
+  background-color: white;
+  margin: auto;
+  padding: 5%;
+  width: 600px;
+}
+

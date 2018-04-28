@@ -26,19 +26,23 @@ exports[`renders month correctly 1`] = `
   <div
     className="viewSwitch"
   >
-    <button
-      onClick={[Function]}
-    >
-      week
-    </button>
-    <button
-      disabled={true}
-      onClick={[Function]}
-    >
-      month
-    </button>
+    <span>
+      <button
+        onClick={[Function]}
+      >
+        week
+      </button>
+      <button
+        disabled={true}
+        onClick={[Function]}
+      >
+        month
+      </button>
+    </span>
   </div>
-  <table>
+  <table
+    className="currentView"
+  >
     <thead>
       <tr>
         <th>
@@ -67,7 +71,9 @@ exports[`renders month correctly 1`] = `
         </th>
       </tr>
     </thead>
-    <tbody>
+    <tbody
+      className="month"
+    >
       <tr>
         <td>
           v.1
@@ -255,19 +261,23 @@ exports[`renders week correctly 1`] = `
   <div
     className="viewSwitch"
   >
-    <button
-      disabled={true}
-      onClick={[Function]}
-    >
-      week
-    </button>
-    <button
-      onClick={[Function]}
-    >
-      month
-    </button>
+    <span>
+      <button
+        disabled={true}
+        onClick={[Function]}
+      >
+        week
+      </button>
+      <button
+        onClick={[Function]}
+      >
+        month
+      </button>
+    </span>
   </div>
-  <table>
+  <table
+    className="currentView"
+  >
     <thead>
       <tr>
         <th>
@@ -296,7 +306,9 @@ exports[`renders week correctly 1`] = `
         </th>
       </tr>
     </thead>
-    <tbody>
+    <tbody
+      className="week"
+    >
       <tr>
         <td>
           00:00

@@ -7,7 +7,7 @@ const Header = props => {
 
 const Body = props => {
     return (
-        <tbody>
+        <tbody className={props.className}>
             {props.body.map(x => {
                 return <tr key={x.label}><td>{x.label}</td>{x.series.map(x => <td key={x.key}>{x.value}</td>)}</tr>
             })}
@@ -19,6 +19,7 @@ Header.propTypes = {
 }
 
 Body.propTypes = {
+    className: PropTypes.string,
     body: PropTypes.arrayOf(PropTypes.shape(
         { 
             label: PropTypes.string, 
